@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <header
+        class="flex justify-between  gap-10  items-center border-b border-gray-200 bg-white px-4 py-4 sm:px-6  lg:px-10">
+
+        <a href="/">
+            <img src="./assets/images/auchan-logo-desktop.svg" alt="Auchan-logo"
+                class="h-auto hidden sm:w-55 sm:flex lg:w-36">
+            <img src="./assets/images/auchan-logo-mobile.svg" alt="Auchan-logo" class="h-auto w-16 sm:hidden">
+
+        </a>
+
+        <nav class="flex w-full items-center justify-center gap-8 hidden sm:flex  lg:w-auto">
+
+            <button type="button"
+                class="flex items-center gap-2  cursor-pointer text-sm font-bold text-gray-700  hover:text-red-600">
+                <i class="fa-solid fa-bars text-xl"></i>
+                <p>Rayons</p>
+            </button>
+
+            <button type="button"
+                class="flex items-center gap-2 cursor-pointer text-sm font-bold text-gray-700  hover:text-red-600 ">
+                <i class="fa-solid fa-tags text-lg text-red-600"></i>
+                <p>Promos</p>
+            </button>
+
+        </nav>
+        <form role="search" class="relative w-full ">
+            <i class="fa-solid fa-magnifying-glass absolute left-4 top-4  text-gray-400"></i>
+
+            <input type="search" placeholder="Rechercher un produit..."
+                class="w-full rounded-full border border-gray-300 bg-gray-50 py-3 pl-11 pr-4 text-sm text-gray-900 ">
+        </form>
+        <button type="button"
+            class="flex justify-center cursor-pointer items-center gap-2 text-gray-800  hover:text-red-600 ">
+            <i class="fa-solid fa-basket-shopping text-xl sm:text-2xl"></i>
+            <p class=" text-[18px] font-bold ">
+                0.00$
+            </p>
+        </button>
+
+    </header>
+
+    <!-- Hero Section -->
+    <section class="px-4 py-5">
+
+        <div class="flex flex-col gap-5 lg:flex-row">
+            <div class="relative flex min-h-[330px] w-full overflow-hidden rounded-2xl  sm:min-h-[390px] lg:min-h-[450px]">
+                
+                <!-- Mobile -->
+                <img src="./assets/images/mobile.webp" alt="hero-section-bg-mobile" class="absolute h-full w-full object-cover sm:hidden">
+
+                <!-- Tablet -->
+                <img src="./assets/images/tablet.webp" alt="hero-section-bg-tablet" class="absolute hidden h-full w-full sm:block object-cover lg:hidden">
+
+                <!-- Desktop -->
+                <img src="./assets/images/desktop.webp" alt="hero-section-bg-desktop" class="absolute hidden h-full w-full object-cover lg:block">
+                <div class="relative gap-4 z-10 flex w-full  flex-col items-start justify-center p-6 text-white sm:p-10 lg:p-12">
+                    <span class="flex items-center gap-2 rounded-full border bg-[#e5e7eb9c] border-gray-500 px-4 py-2 text-xs font-bold text-black sm:text-sm">
+                        <i class="fa-solid fa-tags text-yellow-300"></i>
+                        Promos AUCHAN
+                    </span>
+
+                    <h1 class=" text-black text-3xl font-bold sm:text-4xl lg:text-5xl">
+                        Les bons plans du moment
+                    </h1>
+
+                    <p class="max-w-md text-sm  text-black sm:text-base ">
+                        Découvrez nos offres et profitez de bons prix sur vos produits préférés.
+                    </p>
+
+                    <div class="flex flex-wrap items-center gap-4">
+
+                        <p class=" items-center flex gap-3 text-red-600 rounded-full bg-white px-5 py-3 text-sm font-bold sm:text-base">
+                            Découvrir les promos
+                            <i class="fa-solid fa-arrow-right" ></i>
+                        </p>
+
+                        <p class="text-sm font-medium text-black">
+                            7 produits en promotion
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+      
+
+        </div>
+
+    </section>
+
+
+
+    <script type="module" src="/js/main.js"></script>
+</body>
+
+</html>

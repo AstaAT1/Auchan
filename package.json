@@ -1,0 +1,29 @@
+{
+  "name": "auchan",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+
+
+"scripts": {
+  "dev": "vite",
+  "build": "vite build",
+  "preview": "vite preview"
+}
+  ,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AstaAT1/Auchan.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/AstaAT1/Auchan/issues"
+  },
+  "homepage": "https://github.com/AstaAT1/Auchan#readme",
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "tailwindcss": "^4.3.3",
+    "vite": "^8.3.5"
+  }
+}
