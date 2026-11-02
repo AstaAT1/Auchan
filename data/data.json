@@ -1,245 +1,209 @@
-
-{
-  "products": [
-    {
-      "id": 1,
-      "name": "Pommes Golden 1 kg",
-      "category": "Fruits & Légumes",
-      "price": 18,
-      "oldPrice": null,
-      "stock": 30,
-      "image": null,
-      "description": "Pommes fraîches."
-    },
-    {
-      "id": 2,
-      "name": "Bananes 1 kg",
-      "category": "Fruits & Légumes",
-      "price": 16,
-      "oldPrice": 19,
-      "stock": 25,
-      "image": null,
-      "description": "Bananes fraîches."
-    },
-    {
-      "id": 3,
-      "name": "Tomates 1 kg",
-      "category": "Fruits & Légumes",
-      "price": 12,
-      "oldPrice": null,
-      "stock": 40,
-      "image": null,
-      "description": "Tomates fraîches."
-    },
-    {
-      "id": 4,
-      "name": "Pommes de terre 2 kg",
-      "category": "Fruits & Légumes",
-      "price": 15,
-      "oldPrice": null,
-      "stock": 35,
-      "image": null,
-      "description": "Pommes de terre."
-    },
-    {
-      "id": 5,
-      "name": "Lait entier 1 L",
-      "category": "Produits laitiers",
-      "price": 8.5,
-      "oldPrice": null,
-      "stock": 40,
-      "image": null,
-      "description": "Lait entier UHT."
-    },
-    {
-      "id": 6,
-      "name": "Yaourt nature x4",
-      "category": "Produits laitiers",
-      "price": 10,
-      "oldPrice": 12,
-      "stock": 30,
-      "image": null,
-      "description": "Pack de quatre yaourts."
-    },
-    {
-      "id": 7,
-      "name": "Fromage fondu 16 portions",
-      "category": "Produits laitiers",
-      "price": 22,
-      "oldPrice": null,
-      "stock": 20,
-      "image": null,
-      "description": "Fromage fondu en portions."
-    },
-    {
-      "id": 8,
-      "name": "Beurre doux 200 g",
-      "category": "Produits laitiers",
-      "price": 18,
-      "oldPrice": null,
-      "stock": 18,
-      "image": null,
-      "description": "Beurre doux."
-    },
-    {
-      "id": 9,
-      "name": "Eau minérale 1.5 L",
-      "category": "Boissons",
-      "price": 6,
-      "oldPrice": null,
-      "stock": 60,
-      "image": null,
-      "description": "Bouteille d'eau minérale."
-    },
-    {
-      "id": 10,
-      "name": "Jus d'orange 1 L",
-      "category": "Boissons",
-      "price": 14,
-      "oldPrice": 17,
-      "stock": 25,
-      "image": null,
-      "description": "Jus d'orange."
-    },
-    {
-      "id": 11,
-      "name": "Cola 1.5 L",
-      "category": "Boissons",
-      "price": 13,
-      "oldPrice": null,
-      "stock": 30,
-      "image": null,
-      "description": "Boisson gazeuse."
-    },
-    {
-      "id": 12,
-      "name": "Thé glacé pêche 1.5 L",
-      "category": "Boissons",
-      "price": 15,
-      "oldPrice": null,
-      "stock": 20,
-      "image": null,
-      "description": "Boisson au thé et à la pêche."
-    },
-    {
-      "id": 13,
-      "name": "Pâtes alimentaires 500 g",
-      "category": "Épicerie",
-      "price": 12,
-      "oldPrice": null,
-      "stock": 50,
-      "image": null,
-      "description": "Paquet de pâtes alimentaires."
-    },
-    {
-      "id": 14,
-      "name": "Riz long grain 1 kg",
-      "category": "Épicerie",
-      "price": 17,
-      "oldPrice": 20,
-      "stock": 35,
-      "image": null,
-      "description": "Riz long grain."
-    },
-    {
-      "id": 15,
-      "name": "Farine blanche 1 kg",
-      "category": "Épicerie",
-      "price": 9,
-      "oldPrice": null,
-      "stock": 40,
-      "image": null,
-      "description": "Farine de blé."
-    },
-    {
-      "id": 16,
-      "name": "Huile de tournesol 1 L",
-      "category": "Épicerie",
-      "price": 23,
-      "oldPrice": null,
-      "stock": 28,
-      "image": null,
-      "description": "Huile de tournesol."
-    },
-    {
-      "id": 17,
-      "name": "Shampooing 400 ml",
-      "category": "Hygiène & Beauté",
-      "price": 32,
-      "oldPrice": 38,
-      "stock": 15,
-      "image": null,
-      "description": "Shampooing pour cheveux."
-    },
-    {
-      "id": 18,
-      "name": "Dentifrice 75 ml",
-      "category": "Hygiène & Beauté",
-      "price": 16,
-      "oldPrice": null,
-      "stock": 25,
-      "image": null,
-      "description": "Dentifrice pour l'hygiène buccale."
-    },
-    {
-      "id": 19,
-      "name": "Savon x3",
-      "category": "Hygiène & Beauté",
-      "price": 14,
-      "oldPrice": null,
-      "stock": 30,
-      "image": null,
-      "description": "Lot de trois savons."
-    },
-    {
-      "id": 20,
-      "name": "Gel douche 250 ml",
-      "category": "Hygiène & Beauté",
-      "price": 24,
-      "oldPrice": 29,
-      "stock": 18,
-      "image": null,
-      "description": "Gel douche pour le corps."
-    },
-    {
-      "id": 21,
-      "name": "Lessive liquide 2 L",
-      "category": "Entretien maison",
-      "price": 55,
-      "oldPrice": null,
-      "stock": 12,
-      "image": null,
-      "description": "Lessive liquide pour vêtements."
-    },
-    {
-      "id": 22,
-      "name": "Liquide vaisselle 750 ml",
-      "category": "Entretien maison",
-      "price": 18,
-      "oldPrice": 22,
-      "stock": 20,
-      "image": null,
-      "description": "Produit pour laver la vaisselle."
-    },
-    {
-      "id": 23,
-      "name": "Eau de Javel 1 L",
-      "category": "Entretien maison",
-      "price": 10,
-      "oldPrice": null,
-      "stock": 25,
-      "image": null,
-      "description": "Produit d'entretien ménager."
-    },
-    {
-      "id": 24,
-      "name": "Nettoyant sol 1 L",
-      "category": "Entretien maison",
-      "price": 20,
-      "oldPrice": null,
-      "stock": 16,
-      "image": null,
-      "description": "Nettoyant pour les sols."
-    }
-  ]
-}
+[
+  {
+    "id": 1,
+    "nom": "Carottes",
+    "categorie": "Fruits et légumes",
+    "prix": 1.2,
+    "image": "./assets/images/carotte.webp",
+    "promotion": true,
+    "stock": 40
+  },
+  {
+    "id": 2,
+    "nom": "Chou vert",
+    "categorie": "Fruits et légumes",
+    "prix": 1.8,
+    "image": "./assets/images/chou.webp",
+    "promotion": false,
+    "stock": 22
+  },
+  {
+    "id": 3,
+    "nom": "Poireaux",
+    "categorie": "Fruits et légumes",
+    "prix": 2.3,
+    "image": "./assets/images/poireaux.webp",
+    "promotion": false,
+    "stock": 28
+  },
+  {
+    "id": 4,
+    "nom": "Pommes de terre",
+    "categorie": "Fruits et légumes",
+    "prix": 2.5,
+    "image": "./assets/images/pomme-de-terre.webp",
+    "promotion": true,
+    "stock": 50
+  },
+  {
+    "id": 5,
+    "nom": "Fromage",
+    "categorie": "Produits laitiers",
+    "prix": 3.9,
+    "image": "./assets/images/fromage.webp",
+    "promotion": false,
+    "stock": 25
+  },
+  {
+    "id": 6,
+    "nom": "Lait Lactel",
+    "categorie": "Produits laitiers",
+    "prix": 1.6,
+    "image": "./assets/images/lactel.webp",
+    "promotion": true,
+    "stock": 45
+  },
+  {
+    "id": 7,
+    "nom": "Lait Optima",
+    "categorie": "Produits laitiers",
+    "prix": 1.45,
+    "image": "./assets/images/optima-lait.webp",
+    "promotion": false,
+    "stock": 30
+  },
+  {
+    "id": 8,
+    "nom": "Fromage La Vache Kiri",
+    "categorie": "Produits laitiers",
+    "prix": 2.8,
+    "image": "./assets/images/la-vach-keri.webp",
+    "promotion": false,
+    "stock": 35
+  },
+  {
+    "id": 9,
+    "nom": "Pain",
+    "categorie": "Épicerie et boulangerie",
+    "prix": 1.1,
+    "image": "./assets/images/pain.webp",
+    "promotion": false,
+    "stock": 28
+  },
+  {
+    "id": 10,
+    "nom": "La Fournée Dorée",
+    "categorie": "Épicerie et boulangerie",
+    "prix": 3.2,
+    "image": "./assets/images/la-fournee-doree.webp",
+    "promotion": false,
+    "stock": 20
+  },
+  {
+    "id": 11,
+    "nom": "Gâteaux",
+    "categorie": "Épicerie et boulangerie",
+    "prix": 2.4,
+    "image": "./assets/images/gâteaux.webp",
+    "promotion": true,
+    "stock": 34
+  },
+  {
+    "id": 12,
+    "nom": "Toasts",
+    "categorie": "Épicerie et boulangerie",
+    "prix": 1.95,
+    "image": "./assets/images/toasts.webp",
+    "promotion": false,
+    "stock": 30
+  },
+  {
+    "id": 13,
+    "nom": "Café Nescafé",
+    "categorie": "Épicerie et boulangerie",
+    "prix": 5.5,
+    "image": "./assets/images/nescafe.webp",
+    "promotion": true,
+    "stock": 25
+  },
+  {
+    "id": 14,
+    "nom": "Soin CeraVe",
+    "categorie": "Beauté et soins",
+    "prix": 13.5,
+    "image": "./assets/images/cerave.webp",
+    "promotion": false,
+    "stock": 18
+  },
+  {
+    "id": 15,
+    "nom": "Soin Nuxe",
+    "categorie": "Beauté et soins",
+    "prix": 18.9,
+    "image": "./assets/images/nuxe.webp",
+    "promotion": true,
+    "stock": 12
+  },
+  {
+    "id": 16,
+    "nom": "Soin Uriage",
+    "categorie": "Beauté et soins",
+    "prix": 12.9,
+    "image": "./assets/images/uriage.webp",
+    "promotion": false,
+    "stock": 16
+  },
+  {
+    "id": 17,
+    "nom": "Soin Laino",
+    "categorie": "Beauté et soins",
+    "prix": 8.4,
+    "image": "./assets/images/laino.webp",
+    "promotion": false,
+    "stock": 22
+  },
+  {
+    "id": 18,
+    "nom": "Couches pour bébé",
+    "categorie": "Bébé et puériculture",
+    "prix": 14.9,
+    "image": "./assets/images/couches.webp",
+    "promotion": false,
+    "stock": 24
+  },
+  {
+    "id": 19,
+    "nom": "Lait infantile Calisma",
+    "categorie": "Bébé et puériculture",
+    "prix": 21.5,
+    "image": "./assets/images/poudre-calisma.webp",
+    "promotion": false,
+    "stock": 15
+  },
+  {
+    "id": 20,
+    "nom": "Chaise haute bébé",
+    "categorie": "Bébé et puériculture",
+    "prix": 69.9,
+    "image": "./assets/images/chaise-bebe.webp",
+    "promotion": false,
+    "stock": 8
+  },
+  {
+    "id": 21,
+    "nom": "Vélo",
+    "categorie": "Vélos et accessoires",
+    "prix": 199.0,
+    "image": "./assets/images/velo.webp",
+    "promotion": true,
+    "stock": 7
+  },
+  {
+    "id": 22,
+    "nom": "Vélo enfant",
+    "categorie": "Vélos et accessoires",
+    "prix": 129.0,
+    "image": "./assets/images/velo-enfant.webp",
+    "promotion": false,
+    "stock": 9
+  },
+  {
+    "id": 23,
+    "nom": "Antivol vélo Master Lock",
+    "categorie": "Vélos et accessoires",
+    "prix": 19.9,
+    "image": "./assets/images/master-lock-velo.webp",
+    "promotion": false,
+    "stock": 20
+  }
+]
