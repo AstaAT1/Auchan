@@ -6,9 +6,4 @@ export function api() {
     .then(function(response){
         return response.json()
     })
-    .then(function(data) {
-      localStorage.setItem('sata', JSON.stringify(data))
-      return data;
-        
-    })
 } 
