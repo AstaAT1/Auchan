@@ -14,38 +14,36 @@
 <body>
 
     <header
-        class="flex justify-between  gap-10  items-center border-b border-gray-200 bg-white px-4 py-4 sm:px-6  lg:px-10">
+        class="flex justify-between lg:gap-10 items-center border-b border-gray-200 bg-white px-4 py-4 sm:px-6  lg:px-10">
 
         <a href="/">
             <img src="./assets/images/auchan-logo-desktop.svg" alt="Auchan-logo"
                 class="h-auto hidden sm:w-55 sm:flex lg:w-36">
-            <img src="./assets/images/auchan-logo-mobile.svg" alt="Auchan-logo" class="h-auto w-16 sm:hidden">
+            <img src="./assets/images/auchan-logo-mobile.svg" alt="Auchan-logo" class="h-auto w-26 sm:hidden">
 
         </a>
 
-        <nav class="flex w-full items-center justify-center gap-8 hidden sm:flex  lg:w-auto">
+        <nav class="flex w-full items-center justify-center gap-8  lg:w-auto">
 
-            <button type="button"
+            <button type="button" id="btnCategory"
                 class="flex items-center gap-2  cursor-pointer text-sm font-bold text-gray-700  hover:text-red-600">
                 <i class="fa-solid fa-bars text-xl"></i>
-                <p>Rayons</p>
+                <p class="hidden sm:flex">Rayons</p>
             </button>
 
             <button type="button"
                 class="flex items-center gap-2 cursor-pointer text-sm font-bold text-gray-700  hover:text-red-600 ">
                 <i class="fa-solid fa-tags text-lg text-red-600"></i>
-                <p>Promos</p>
+                <p class="hidden sm:flex">Promos</p>
             </button>
 
         </nav>
         <form role="search" class="relative w-full ">
             <i class="fa-solid fa-magnifying-glass absolute left-4 top-4  text-gray-400"></i>
 
-            <input type="search" id="search" placeholder="Rechercher un produit..."
-                class="w-full rounded-full border border-gray-300 bg-gray-50 py-3 pl-11 pr-4 text-sm text-gray-900 ">
+            <input type="search" id="search" placeholder="Rechercher un produit..." class="w-full rounded-full border border-gray-300 bg-gray-50 py-3 pl-11 pr-4 text-sm text-gray-900 ">
         </form>
-        <button type="button"
-            class="flex justify-center cursor-pointer items-center gap-2 text-gray-800  hover:text-red-600 ">
+        <button type="button" class="flex justify-center ml-2 cursor-pointer items-center gap-2 text-gray-800  hover:text-red-600 ">
             <i class="fa-solid fa-basket-shopping text-xl sm:text-2xl"></i>
             <p class=" text-[18px] font-bold ">
                 0.00$
@@ -56,6 +54,39 @@
 
     <!-- Hero Section -->
     <section class="px-4 py-5">
+       
+                        
+    <!-- Modal Category -->
+<div id="categoryModal" class=" hidden fixed inset-0 z-50 bg-black/50 w-full items-center justify-center p-4">
+
+    <div class="bg-white w-[75%] rounded-2xl flex flex-col gap-5  shadow-2xl p-6">
+
+        <div class="flex justify-between ">
+
+            <div>
+                <h2 class="text-2xl font-bold text-gray-900">
+                    Nos catégories
+                </h2>
+                <p class="text-sm  text-gray-500 ">
+                    Découvrez nos produits par catégorie
+                </p>
+            </div>
+        </div>
+
+        <div id="categoryList" class="flex gap-5 flex-wrap ">
+            
+
+        </div>
+
+            <button id="cancelModal" type="button"
+                class="w-full bg-gray-100 text-gray-700 font-bold py-3 rounded-xl hover:bg-gray-200 cursor-pointer">
+                Fermer
+            </button>
+    
+
+    </div>
+</div>
+
 
         <div class="flex flex-col gap-5 lg:flex-row">
             <div class="relative flex min-h-[330px] w-full overflow-hidden rounded-2xl  sm:min-h-[390px] lg:min-h-[450px]">
@@ -105,8 +136,11 @@
 
     </section>
     <!-- section 1 -->
-    <section>
+    <section class=" flex flex-col gap-4">
         <div id="produits" class="flex flex-wrap gap-5 justify-center items-center">
+
+        </div>
+        <div id="pagination" class=" flex gap-1 justify-center m-5">
 
         </div>
     </section>
