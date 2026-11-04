@@ -1,4 +1,45 @@
 const produits = document.querySelector('#produits')
+const btnCategory = document.querySelector('#btnCategory')
+const modal = document.querySelector('#categoryModal')
+const fermer = document.querySelector('#cancelModal')
+const categoryList = document.querySelector('#categoryList')
+
+btnCategory.addEventListener('click', function () {
+    modal.style.display = 'flex'
+})
+
+fermer.addEventListener('click', function () {
+    modal.style.display = 'none'
+})
+export function afficheCategory(data , selectCat) {
+    console.log("DATA CATEGORY:", data)
+    const catArr = []
+
+    data.forEach(function (produit) {
+        if (!catArr.includes(produit.categorie)) {
+            catArr.push(produit.categorie)
+        }
+    })
+    catArr.unshift("All")
+    categoryList.innerHTML = ''
+    catArr.forEach(e => {
+        const catBtn = document.createElement('button')
+        catBtn.className = 'w-full px-4 py-4 rounded-xl border border-gray-200 bg-white text-sm font-medium text-gray-700 cursor-pointer'
+        catBtn.textContent = e
+        if (e === 'All') {
+            catBtn.textContent= 'Tout les produits'
+        }
+        catBtn.addEventListener('click', function () {
+            selectCat(e)
+            modal.style.display = 'none'
+
+        })
+        categoryList.append(catBtn)
+     
+
+    });
+
+}
 export function affiche(arr) {
 
     produits.innerHTML = arr.map(function (produit) {
