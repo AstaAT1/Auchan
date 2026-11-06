@@ -4,6 +4,11 @@ const modal = document.querySelector('#categoryModal')
 const fermer = document.querySelector('#cancelModal')
 const categoryList = document.querySelector('#categoryList')
 
+const btnPanier = document.querySelector('#btnPanier')
+const modalPanier = document.querySelector('#panierModal')
+const fermerPanier = document.querySelector('#cancelPanierModal')
+
+
 btnCategory.addEventListener('click', function () {
     modal.style.display = 'flex'
 })
@@ -11,6 +16,14 @@ btnCategory.addEventListener('click', function () {
 fermer.addEventListener('click', function () {
     modal.style.display = 'none'
 })
+
+btnPanier.addEventListener('click', function () {
+    modalPanier.style.display = 'flex'
+})
+
+fermerPanier.addEventListener('click', function () {
+    modalPanier.style.display = 'none'
+}) 
 export function afficheCategory(data , selectCat) {
     console.log("DATA CATEGORY:", data)
     const catArr = []

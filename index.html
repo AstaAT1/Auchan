@@ -43,7 +43,7 @@
 
             <input type="search" id="search" placeholder="Rechercher un produit..." class="w-full rounded-full border border-gray-300 bg-gray-50 py-3 pl-11 pr-4 text-sm text-gray-900 ">
         </form>
-        <button type="button" class="flex justify-center ml-2 cursor-pointer items-center gap-2 text-gray-800  hover:text-red-600 ">
+        <button type="button" id="btnPanier" class="flex justify-center ml-2 cursor-pointer items-center gap-2 text-gray-800  hover:text-red-600 ">
             <i class="fa-solid fa-basket-shopping text-xl sm:text-2xl"></i>
             <p class=" text-[18px] font-bold ">
                 0.00$
@@ -82,7 +82,44 @@
                 class="w-full bg-gray-100 text-gray-700 font-bold py-3 rounded-xl hover:bg-gray-200 cursor-pointer">
                 Fermer
             </button>
+
+    </div>
+</div>
+
     
+<!-- Modal Panier -->
+<div id="panierModal" class="hidden fixed inset-0 z-50 bg-black/50 w-full items-center justify-center p-4">
+
+    <div class="bg-white w-[75%] rounded-2xl flex flex-col gap-5 shadow-2xl p-6">
+
+        <div class="flex justify-between">
+
+            <div>
+                <h2 class="text-2xl font-bold text-gray-900">
+                    Mon panier
+                </h2>
+                <p class="text-sm text-gray-500">
+                    Consultez et gérez les produits de votre panier
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Produits du panier -->
+        <div id="cartList" class="flex gap-5 flex-wrap">
+
+        </div>
+
+        <!-- Total -->
+        <div class="flex justify-between items-center">
+            <p class="font-bold text-gray-900">Total :</p>
+            <p id="cartTotal" class="font-bold text-red-600">0.00 $</p>
+        </div>
+
+        <button id="cancelPanierModal" type="button"
+            class="w-full bg-gray-100 text-gray-700 font-bold py-3 rounded-xl hover:bg-gray-200 cursor-pointer">
+            Fermer
+        </button>
 
     </div>
 </div>
