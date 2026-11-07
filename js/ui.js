@@ -23,8 +23,8 @@ btnPanier.addEventListener('click', function () {
 
 fermerPanier.addEventListener('click', function () {
     modalPanier.style.display = 'none'
-}) 
-export function afficheCategory(data , selectCat) {
+})
+export function afficheCategory(data, selectCat) {
     console.log("DATA CATEGORY:", data)
     const catArr = []
 
@@ -40,7 +40,7 @@ export function afficheCategory(data , selectCat) {
         catBtn.className = 'w-full px-4 py-4 rounded-xl border border-gray-200 bg-white text-sm font-medium text-gray-700 cursor-pointer'
         catBtn.textContent = e
         if (e === 'All') {
-            catBtn.textContent= 'Tout les produits'
+            catBtn.textContent = 'Tout les produits'
         }
         catBtn.addEventListener('click', function () {
             selectCat(e)
@@ -48,12 +48,12 @@ export function afficheCategory(data , selectCat) {
 
         })
         categoryList.append(catBtn)
-     
+
 
     });
 
 }
-export function affiche(arr) {
+export function affiche(arr , ajouterPanier) {
 
     produits.innerHTML = arr.map(function (produit) {
         return `
@@ -62,10 +62,18 @@ export function affiche(arr) {
             <p class="text-sm text-gray-500"> ${produit.categorie} </p>
             <h3 class="font-bold text-lg">${produit.nom}</h3>
             <p class="text-red-600 font-bold">${produit.prix} $</p>
-            <button class="bg-red-600 text-white rounded-lg py-2 cursor-pointer">Ajouter au panier</button>
+            <button class="add-to-cart bg-red-600 text-white rounded-lg py-2 cursor-pointer">Ajouter au panier</button>
         </div>
     `
-    }).join("");
+    }).join("")
+
+    const buttons = produits.querySelectorAll(".add-to-cart")
+
+    buttons.forEach(function (button, index) {
+        button.addEventListener("click", function () {
+            ajouterPanier(arr[index])
+                        })
+    })
 
 }
 export function btnPagination(totalPages, currentPage, changePage) {
@@ -83,4 +91,20 @@ export function btnPagination(totalPages, currentPage, changePage) {
         })
         pagi.append(btn)
     }
+}
+
+export function afficherPanier(panier) {
+    const cartList = document.querySelector("#cartList")
+
+    cartList.innerHTML = panier.map(function(produit) {
+        return `
+            <div class="flex items-center justify-between w-full p-3 border rounded-lg">
+                <div class="flex flex-col">
+                    <h3 class="font-bold">${produit.nom}</h3>
+                    <p>${produit.prix} $</p>
+                    <p>Quantité : ${produit.quantite}</p>
+                </div>
+            </div>
+        `;
+    }).join("")
 }

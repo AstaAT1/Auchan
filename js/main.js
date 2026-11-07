@@ -2,14 +2,16 @@ import { api } from "./api.js";
 import { affiche } from "./ui.js";
 import { searchProducts } from "./products.js";
 import { pagination } from "./products.js";
-import { afficheCategory } from "./ui.js";
+import { afficheCategory, afficherPanier } from "./ui.js";
 const searchInput = document.querySelector('#search')
 import { btnPagination } from "./ui.js";
 import { setData, getData } from "./storage.js";
-import {filterByCategory} from './products.js'
+import { filterByCategory } from './products.js'
+import { addToCart, calculateTotal } from "./cart.js"
 let currentPage = 1
 const limit = 8
 let currentCat = "All"
+let panier = []
 
 api().then(function (data) {
     const saveProducts = getData()
@@ -24,10 +26,20 @@ api().then(function (data) {
     function renderCatalogue() {
         const searchName = searchInput.value
         const filterProducts = searchProducts(products, searchName)
-        const categoryProducts = filterByCategory(filterProducts , currentCat)
+        const categoryProducts = filterByCategory(filterProducts, currentCat)
         const totalPages = Math.ceil(categoryProducts.length / limit)
         const pagi = pagination(categoryProducts, currentPage, limit)
-        affiche(pagi)
+        affiche(pagi, function (produit) {
+            
+            addToCart(panier, produit)
+            afficherPanier(panier)
+
+            const total = calculateTotal(panier);
+            const cartTotal = document.querySelector("#cartTotal")
+            cartTotal.textContent = total.toFixed(2) + " $"
+            const btnPanier = document.querySelector("#btnPanier p")
+            btnPanier.textContent = total.toFixed(2) + " $"
+        })
         function changePage(page) {
             currentPage = page
             renderCatalogue()
@@ -42,14 +54,14 @@ api().then(function (data) {
 
     })
     renderCatalogue()
-    afficheCategory(products, function(category) {
+    afficheCategory(products, function (category) {
         currentCat = category
         currentPage = 1
         renderCatalogue()
         console.log(currentCat);
     })
 
-    
+
 })
 
 
