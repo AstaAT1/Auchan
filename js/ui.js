@@ -57,7 +57,7 @@ export function affiche(arr, ajouterPanier) {
 
     produits.innerHTML = arr.map(function (produit) {
         return `
-        <div class="flex flex-col gap-3 rounded-xl bg-white p-4 shadow-sm border border-gray-200">
+        <div draggable="true" class="product-card flex flex-col gap-3 rounded-xl bg-white p-4 shadow-sm border border-gray-200">
             <img src="${produit.image}" alt="${produit.nom}" class="w-full h-40" >
             <p class="text-sm text-gray-500"> ${produit.categorie} </p>
             <h3 class="font-bold text-lg">${produit.nom}</h3>

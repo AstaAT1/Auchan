@@ -8,6 +8,9 @@ import { btnPagination } from "./ui.js";
 import { setData, getData, saveCart, getCart } from "./storage.js";
 import { filterByCategory } from './products.js'
 import { addToCart, calculateTotal, removeFromCart } from "./cart.js"
+import { initDrag } from "./dragDrop.js"
+
+
 let currentPage = 1
 const limit = 8
 let currentCat = "All"
@@ -30,6 +33,12 @@ api().then(function (data) {
         const totalPages = Math.ceil(categoryProducts.length / limit)
         const pagi = pagination(categoryProducts, currentPage, limit)
         affiche(pagi, function (produit) {
+            addToCart(panier, produit)
+            saveCart(panier)
+            updatePanier()
+
+        })
+        initDrag(pagi, function (produit) {
             addToCart(panier, produit)
             saveCart(panier)
             updatePanier()
