@@ -13,46 +13,65 @@
 
 <body>
 
-    <header
-        class="flex justify-between lg:gap-10 items-center border-b border-gray-200 bg-white px-4 py-4 sm:px-6  lg:px-10">
+    
+<header class="flex flex-col border-b border-gray-200 bg-white">
 
-        <a href="/">
-            <img src="./assets/images/auchan-logo-desktop.svg" alt="Auchan-logo"
+    <div class="flex w-full items-center justify-between border-b border-gray-200 px-4 py-3 sm:px-6 lg:px-10">
+
+        <a href="./index.html">
+            <img src="./assets/images/auchan-logo-desktop.svg"
+                alt="Auchan-logo"
                 class="h-auto hidden sm:w-55 sm:flex lg:w-36">
-            <img src="./assets/images/auchan-logo-mobile.svg" alt="Auchan-logo" class="h-auto w-26 sm:hidden">
 
+            <img src="./assets/images/auchan-logo-mobile.svg"
+                alt="Auchan-logo"
+                class="h-auto w-26 sm:hidden">
         </a>
 
-        <nav class="flex w-full items-center justify-center gap-8  lg:w-auto">
+        <a href="./contact.html"
+            class="flex items-center gap-2 text-sm font-bold text-gray-700 hover:text-red-600">
+            <i class="fa-solid fa-envelope"></i>
+            <span>Contactez-nous</span>
+        </a>
+
+    </div>
+
+    <div class="flex justify-between lg:gap-10 items-center px-4 py-4 sm:px-6 lg:px-10">
+
+        <nav class="flex w-full items-center justify-center gap-8 lg:w-auto">
 
             <button type="button" id="btnCategory"
-                class="flex items-center gap-2  cursor-pointer text-sm font-bold text-gray-700  hover:text-red-600">
+                class="flex items-center gap-2 cursor-pointer text-sm font-bold text-gray-700 hover:text-red-600">
                 <i class="fa-solid fa-bars text-xl"></i>
                 <p class="hidden sm:flex">Rayons</p>
             </button>
 
             <button type="button"
-                class="flex items-center gap-2 cursor-pointer text-sm font-bold text-gray-700  hover:text-red-600 ">
+                class="flex items-center gap-2 cursor-pointer text-sm font-bold text-gray-700 hover:text-red-600">
                 <i class="fa-solid fa-tags text-lg text-red-600"></i>
                 <p class="hidden sm:flex">Promos</p>
             </button>
 
         </nav>
-        <form role="search" class="relative w-full ">
-            <i class="fa-solid fa-magnifying-glass absolute left-4 top-4  text-gray-400"></i>
 
-            <input type="search" id="search" placeholder="Rechercher un produit..."
-                class="w-full rounded-full border border-gray-300 bg-gray-50 py-3 pl-11 pr-4 text-sm text-gray-900 ">
+        <form role="search" class="relative w-full">
+            <i class="fa-solid fa-magnifying-glass absolute left-4 top-4 text-gray-400"></i>
+
+            <input type="search" id="search"
+                placeholder="Rechercher un produit..."
+                class="w-full rounded-full border border-gray-300 bg-gray-50 py-3 pl-11 pr-4 text-sm text-gray-900">
         </form>
+
         <button type="button" id="btnPanier"
-            class="flex justify-center ml-2 cursor-pointer items-center gap-2 text-gray-800  hover:text-red-600 ">
+            class="flex justify-center ml-2 cursor-pointer items-center gap-2 text-gray-800 hover:text-red-600">
             <i class="fa-solid fa-basket-shopping text-xl sm:text-2xl"></i>
-            <p class=" text-[18px] font-bold ">
-                0.00$
-            </p>
+            <p class="text-[18px] font-bold">0.00$</p>
         </button>
 
-    </header>
+    </div>
+
+</header>
+
 
     <!-- Hero Section -->
     <section class="px-4 py-5">

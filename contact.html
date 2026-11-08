@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="assets/images/auchan-logo-mobile.svg" type="image/x-icon">
+    <title>Contactez-nous</title>
+
+</head>
+
+<body>
+
+    <header class="bg-white shadow-sm p-5">
+        <div class="flex w-full items-center justify-between px-4 py-3 sm:px-6 lg:px-10">
+
+            <a href="./index.html">
+                <img src="./assets/images/auchan-logo-desktop.svg" alt="Auchan-logo"
+                    class="h-auto hidden sm:w-55 sm:flex lg:w-36">
+
+                <img src="./assets/images/auchan-logo-mobile.svg" alt="Auchan-logo" class="h-auto w-26 sm:hidden">
+            </a>
+
+            <a href="./index.html" class="flex items-center gap-2 text-sm font-bold text-gray-700 hover:text-red-600">
+                <i class="fa-solid fa-house"></i>
+                <span>Accueil</span>
+            </a>
+
+        </div>
+    </header>
+
+    <main class=" flex justify-center items-center py-12">
+        <div class="bg-[#f9f9f9] rounded-2xl w-[90%] md:w-[50%] flex flex-col gap-4 shadow-red-600 shadow-sm p-8">
+
+            <h2 class="text-3xl font-bold text-gray-900">
+                Contactez-nous
+            </h2>
+
+            <p class="text-gray-500">
+                Une question ? Envoyez-nous votre message.
+            </p>
+
+            <form id="contactForm" class="flex flex-col gap-5">
+
+                <div class="flex flex-col gap-2">
+                    <label for="nom" class="font-medium">Nom complet</label>
+                    <input id="nom" type="text" class="border border-gray-300 rounded-lg p-3"
+                        placeholder="Votre nom complet" required>
+                    <p id="nomError" class="text-red-600 text-sm"></p>
+                </div>
+
+                <div class="flex flex-col gap-2">
+                    <label for="email" class="font-medium">Email</label>
+                    <input id="email" type="email" class="border border-gray-300 rounded-lg p-3"
+                        placeholder="exemple@email.com" required>
+                    <p id="emailError" class="text-red-600 text-sm"></p>
+                </div>
+
+                <div class="flex flex-col gap-2">
+                    <label for="telephone" class="font-medium">Téléphone</label>
+                    <input id="telephone" type="tel" class="border border-gray-300 rounded-lg p-3"
+                        placeholder="0612345678" required>
+                    <p id="telephoneError" class="text-red-600 text-sm"></p>
+                </div>
+
+                <div class="flex flex-col gap-2">
+                    <label for="message" class="font-medium">Message</label>
+                    <textarea id="message" rows="5" class="border border-gray-300 rounded-lg p-3"
+                        placeholder="Votre message..." required ></textarea>
+                    <p id="messageError" class="text-red-600 text-sm"></p>
+                </div>
+
+                <p id="formStatus" role="status" class="text-sm"></p>
+
+                <button type="submit"
+                    class="bg-red-600 text-white font-bold py-3 rounded-xl cursor-pointer hover:bg-red-700">
+                    Envoyer le message
+                </button>
+
+            </form>
+        </div>
+    </main>
+
+    <script type="module" src="./js/validation.js"></script>
+</body>
+
+</html>
