@@ -5,13 +5,13 @@ import { pagination } from "./products.js";
 import { afficheCategory, afficherPanier } from "./ui.js";
 const searchInput = document.querySelector('#search')
 import { btnPagination } from "./ui.js";
-import { setData, getData } from "./storage.js";
+import { setData, getData, saveCart, getCart } from "./storage.js";
 import { filterByCategory } from './products.js'
-import { addToCart, calculateTotal } from "./cart.js"
+import { addToCart, calculateTotal, removeFromCart } from "./cart.js"
 let currentPage = 1
 const limit = 8
 let currentCat = "All"
-let panier = []
+let panier = getCart()
 
 api().then(function (data) {
     const saveProducts = getData()
@@ -30,15 +30,9 @@ api().then(function (data) {
         const totalPages = Math.ceil(categoryProducts.length / limit)
         const pagi = pagination(categoryProducts, currentPage, limit)
         affiche(pagi, function (produit) {
-            
             addToCart(panier, produit)
-            afficherPanier(panier)
-
-            const total = calculateTotal(panier);
-            const cartTotal = document.querySelector("#cartTotal")
-            cartTotal.textContent = total.toFixed(2) + " $"
-            const btnPanier = document.querySelector("#btnPanier p")
-            btnPanier.textContent = total.toFixed(2) + " $"
+            saveCart(panier)
+            updatePanier()
         })
         function changePage(page) {
             currentPage = page
@@ -54,12 +48,27 @@ api().then(function (data) {
 
     })
     renderCatalogue()
+    updatePanier()
     afficheCategory(products, function (category) {
         currentCat = category
         currentPage = 1
         renderCatalogue()
         console.log(currentCat);
     })
+    function updatePanier() {
+        afficherPanier(panier, function (id) {
+            panier = removeFromCart(panier, id)
+            saveCart(panier)
+            updatePanier()
+        })
+
+        const total = calculateTotal(panier)
+
+        const cartTotal = document.querySelector("#cartTotal")
+        cartTotal.textContent = total.toFixed(2) + " $"
+        const btnPanier = document.querySelector("#btnPanier p")
+        btnPanier.textContent = total.toFixed(2) + " $"
+    }
 
 
 })

@@ -53,7 +53,7 @@ export function afficheCategory(data, selectCat) {
     });
 
 }
-export function affiche(arr , ajouterPanier) {
+export function affiche(arr, ajouterPanier) {
 
     produits.innerHTML = arr.map(function (produit) {
         return `
@@ -72,7 +72,7 @@ export function affiche(arr , ajouterPanier) {
     buttons.forEach(function (button, index) {
         button.addEventListener("click", function () {
             ajouterPanier(arr[index])
-                        })
+        })
     })
 
 }
@@ -93,10 +93,10 @@ export function btnPagination(totalPages, currentPage, changePage) {
     }
 }
 
-export function afficherPanier(panier) {
+export function afficherPanier(panier, onDelete) {
     const cartList = document.querySelector("#cartList")
 
-    cartList.innerHTML = panier.map(function(produit) {
+    cartList.innerHTML = panier.map(function (produit) {
         return `
             <div class="flex items-center justify-between w-full p-3 border rounded-lg">
                 <div class="flex flex-col">
@@ -104,7 +104,17 @@ export function afficherPanier(panier) {
                     <p>${produit.prix} $</p>
                     <p>Quantité : ${produit.quantite}</p>
                 </div>
+                <button class="delete-panier cursor-pointer p-2 text-red-600">
+                    <i class="fa-solid fa-trash"></i>
+                </button>
             </div>
         `;
     }).join("")
+    const buttons = cartList.querySelectorAll(".delete-panier");
+
+    buttons.forEach(function (button, index) {
+        button.addEventListener("click", function () {
+            onDelete(panier[index].id)
+        })
+    })
 }

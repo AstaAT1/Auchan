@@ -18,10 +18,15 @@ export const addToCart = (panier, produit) => {
 
 export const calculateTotal = function (panier) {
     let total = 0
-
      panier.forEach(function (produit) {
-        total += produit.prix * produit.quantite;
+        total += produit.prix * produit.quantite
     })
-
     return total
+}
+
+
+export const removeFromCart = (panier, id) => {
+    return panier.filter(function(produit) {
+        return produit.id !== id
+    })
 }
