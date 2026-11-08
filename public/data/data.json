@@ -1,0 +1,209 @@
+[
+  {
+    "id": 1,
+    "nom": "Carottes",
+    "categorie": "Fruits et légumes",
+    "prix": 1.2,
+    "image": "./assets/images/carotte.webp",
+    "promotion": true,
+    "stock": 40
+  },
+  {
+    "id": 2,
+    "nom": "Chou vert",
+    "categorie": "Fruits et légumes",
+    "prix": 1.8,
+    "image": "./assets/images/chou.webp",
+    "promotion": false,
+    "stock": 22
+  },
+  {
+    "id": 3,
+    "nom": "Poireaux",
+    "categorie": "Fruits et légumes",
+    "prix": 2.3,
+    "image": "./assets/images/poireaux.webp",
+    "promotion": false,
+    "stock": 28
+  },
+  {
+    "id": 4,
+    "nom": "Pommes de terre",
+    "categorie": "Fruits et légumes",
+    "prix": 2.5,
+    "image": "./assets/images/pomme-de-terre.webp",
+    "promotion": true,
+    "stock": 50
+  },
+  {
+    "id": 5,
+    "nom": "Fromage",
+    "categorie": "Produits laitiers",
+    "prix": 3.9,
+    "image": "./assets/images/fromage.webp",
+    "promotion": false,
+    "stock": 25
+  },
+  {
+    "id": 6,
+    "nom": "Lait Lactel",
+    "categorie": "Produits laitiers",
+    "prix": 1.6,
+    "image": "./assets/images/lactel.webp",
+    "promotion": true,
+    "stock": 45
+  },
+  {
+    "id": 7,
+    "nom": "Lait Optima",
+    "categorie": "Produits laitiers",
+    "prix": 1.45,
+    "image": "./assets/images/optima-lait.webp",
+    "promotion": false,
+    "stock": 30
+  },
+  {
+    "id": 8,
+    "nom": "Fromage La Vache Kiri",
+    "categorie": "Produits laitiers",
+    "prix": 2.8,
+    "image": "./assets/images/la-vach-keri.webp",
+    "promotion": false,
+    "stock": 35
+  },
+  {
+    "id": 9,
+    "nom": "Pain",
+    "categorie": "Épicerie et boulangerie",
+    "prix": 1.1,
+    "image": "./assets/images/pain.webp",
+    "promotion": false,
+    "stock": 28
+  },
+  {
+    "id": 10,
+    "nom": "La Fournée Dorée",
+    "categorie": "Épicerie et boulangerie",
+    "prix": 3.2,
+    "image": "./assets/images/la-fournee-doree.webp",
+    "promotion": false,
+    "stock": 20
+  },
+  {
+    "id": 11,
+    "nom": "Gâteaux",
+    "categorie": "Épicerie et boulangerie",
+    "prix": 2.4,
+    "image": "./assets/images/gâteaux.webp",
+    "promotion": true,
+    "stock": 34
+  },
+  {
+    "id": 12,
+    "nom": "Toasts",
+    "categorie": "Épicerie et boulangerie",
+    "prix": 1.95,
+    "image": "./assets/images/toasts.webp",
+    "promotion": false,
+    "stock": 30
+  },
+  {
+    "id": 13,
+    "nom": "Café Nescafé",
+    "categorie": "Épicerie et boulangerie",
+    "prix": 5.5,
+    "image": "./assets/images/nescafe.webp",
+    "promotion": true,
+    "stock": 25
+  },
+  {
+    "id": 14,
+    "nom": "Soin CeraVe",
+    "categorie": "Beauté et soins",
+    "prix": 13.5,
+    "image": "./assets/images/cerave.webp",
+    "promotion": false,
+    "stock": 18
+  },
+  {
+    "id": 15,
+    "nom": "Soin Nuxe",
+    "categorie": "Beauté et soins",
+    "prix": 18.9,
+    "image": "./assets/images/nuxe.webp",
+    "promotion": true,
+    "stock": 12
+  },
+  {
+    "id": 16,
+    "nom": "Soin Uriage",
+    "categorie": "Beauté et soins",
+    "prix": 12.9,
+    "image": "./assets/images/uriage.webp",
+    "promotion": false,
+    "stock": 16
+  },
+  {
+    "id": 17,
+    "nom": "Soin Laino",
+    "categorie": "Beauté et soins",
+    "prix": 8.4,
+    "image": "./assets/images/laino.webp",
+    "promotion": false,
+    "stock": 22
+  },
+  {
+    "id": 18,
+    "nom": "Couches pour bébé",
+    "categorie": "Bébé et puériculture",
+    "prix": 14.9,
+    "image": "./assets/images/couches.webp",
+    "promotion": false,
+    "stock": 24
+  },
+  {
+    "id": 19,
+    "nom": "Lait infantile Calisma",
+    "categorie": "Bébé et puériculture",
+    "prix": 21.5,
+    "image": "./assets/images/poudre-calisma.webp",
+    "promotion": false,
+    "stock": 15
+  },
+  {
+    "id": 20,
+    "nom": "Chaise haute bébé",
+    "categorie": "Bébé et puériculture",
+    "prix": 69.9,
+    "image": "./assets/images/chaise-bebe.webp",
+    "promotion": false,
+    "stock": 8
+  },
+  {
+    "id": 21,
+    "nom": "Vélo",
+    "categorie": "Vélos et accessoires",
+    "prix": 199.0,
+    "image": "./assets/images/velo.webp",
+    "promotion": true,
+    "stock": 7
+  },
+  {
+    "id": 22,
+    "nom": "Vélo enfant",
+    "categorie": "Vélos et accessoires",
+    "prix": 129.0,
+    "image": "./assets/images/velo-enfant.webp",
+    "promotion": false,
+    "stock": 9
+  },
+  {
+    "id": 23,
+    "nom": "Antivol vélo Master Lock",
+    "categorie": "Vélos et accessoires",
+    "prix": 19.9,
+    "image": "./assets/images/master-lock-velo.webp",
+    "promotion": false,
+    "stock": 20
+  }
+]

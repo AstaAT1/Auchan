@@ -1,7 +1,17 @@
 
 import { defineConfig } from 'vite'
 import tailwindcss from '@tailwindcss/vite'
+import { resolve } from 'node:path'
 
 export default defineConfig({
-  plugins: [tailwindcss()],
+    plugins: [tailwindcss()],
+
+    build: {
+        rollupOptions: {
+            input: {
+                main: resolve(import.meta.dirname, 'index.html'),
+                contact: resolve(import.meta.dirname, 'contact.html')
+            }
+        }
+    }
 })
