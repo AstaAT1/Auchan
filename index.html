@@ -41,9 +41,11 @@
         <form role="search" class="relative w-full ">
             <i class="fa-solid fa-magnifying-glass absolute left-4 top-4  text-gray-400"></i>
 
-            <input type="search" id="search" placeholder="Rechercher un produit..." class="w-full rounded-full border border-gray-300 bg-gray-50 py-3 pl-11 pr-4 text-sm text-gray-900 ">
+            <input type="search" id="search" placeholder="Rechercher un produit..."
+                class="w-full rounded-full border border-gray-300 bg-gray-50 py-3 pl-11 pr-4 text-sm text-gray-900 ">
         </form>
-        <button type="button" id="btnPanier" class="flex justify-center ml-2 cursor-pointer items-center gap-2 text-gray-800  hover:text-red-600 ">
+        <button type="button" id="btnPanier"
+            class="flex justify-center ml-2 cursor-pointer items-center gap-2 text-gray-800  hover:text-red-600 ">
             <i class="fa-solid fa-basket-shopping text-xl sm:text-2xl"></i>
             <p class=" text-[18px] font-bold ">
                 0.00$
@@ -54,90 +56,96 @@
 
     <!-- Hero Section -->
     <section class="px-4 py-5">
-       
-                        
-    <!-- Modal Category -->
-<div id="categoryModal" class=" hidden fixed inset-0 z-50 bg-black/50 w-full items-center justify-center p-4">
 
-    <div class="bg-white w-[75%] rounded-2xl flex flex-col gap-5  shadow-2xl p-6">
 
-        <div class="flex justify-between ">
+        <!-- Modal Category -->
+        <div id="categoryModal" class=" hidden fixed inset-0 z-50 bg-black/50 w-full items-center justify-center p-4">
 
-            <div>
-                <h2 class="text-2xl font-bold text-gray-900">
-                    Nos catégories
-                </h2>
-                <p class="text-sm  text-gray-500 ">
-                    Découvrez nos produits par catégorie
-                </p>
+            <div class="bg-white w-[75%] rounded-2xl flex flex-col gap-5  shadow-2xl p-6">
+
+                <div class="flex justify-between ">
+
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-900">
+                            Nos catégories
+                        </h2>
+                        <p class="text-sm  text-gray-500 ">
+                            Découvrez nos produits par catégorie
+                        </p>
+                    </div>
+                </div>
+
+                <div id="categoryList" class="flex gap-5 flex-wrap ">
+
+
+                </div>
+
+                <button id="cancelModal" type="button"
+                    class="w-full bg-gray-100 text-gray-700 font-bold py-3 rounded-xl hover:bg-gray-200 cursor-pointer">
+                    Fermer
+                </button>
+
             </div>
         </div>
 
-        <div id="categoryList" class="flex gap-5 flex-wrap ">
-            
 
-        </div>
+        <!-- Modal Panier -->
+        <div id="panierModal" class="hidden fixed inset-0 z-50 bg-black/50 w-full items-center justify-center p-4">
 
-            <button id="cancelModal" type="button"
-                class="w-full bg-gray-100 text-gray-700 font-bold py-3 rounded-xl hover:bg-gray-200 cursor-pointer">
-                Fermer
-            </button>
+            <div class="bg-white w-[75%] rounded-2xl flex flex-col gap-5 shadow-2xl p-6">
 
-    </div>
-</div>
+                <div class="flex justify-between">
 
-    
-<!-- Modal Panier -->
-<div id="panierModal" class="hidden fixed inset-0 z-50 bg-black/50 w-full items-center justify-center p-4">
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-900">
+                            Mon panier
+                        </h2>
+                        <p class="text-sm text-gray-500">
+                            Consultez et gérez les produits de votre panier
+                        </p>
+                    </div>
 
-    <div class="bg-white w-[75%] rounded-2xl flex flex-col gap-5 shadow-2xl p-6">
+                </div>
 
-        <div class="flex justify-between">
+                <!-- Produits du panier -->
+                <div id="cartList" class="flex gap-5 flex-wrap">
 
-            <div>
-                <h2 class="text-2xl font-bold text-gray-900">
-                    Mon panier
-                </h2>
-                <p class="text-sm text-gray-500">
-                    Consultez et gérez les produits de votre panier
-                </p>
+                </div>
+
+                <!-- Total -->
+                <div class="flex justify-between items-center">
+                    <p class="font-bold text-gray-900">Total :</p>
+                    <p id="cartTotal" class="font-bold text-red-600">0.00 $</p>
+                </div>
+
+                <button id="cancelPanierModal" type="button"
+                    class="w-full bg-gray-100 text-gray-700 font-bold py-3 rounded-xl hover:bg-gray-200 cursor-pointer">
+                    Fermer
+                </button>
+
             </div>
-
         </div>
-
-        <!-- Produits du panier -->
-        <div id="cartList" class="flex gap-5 flex-wrap">
-
-        </div>
-
-        <!-- Total -->
-        <div class="flex justify-between items-center">
-            <p class="font-bold text-gray-900">Total :</p>
-            <p id="cartTotal" class="font-bold text-red-600">0.00 $</p>
-        </div>
-
-        <button id="cancelPanierModal" type="button"
-            class="w-full bg-gray-100 text-gray-700 font-bold py-3 rounded-xl hover:bg-gray-200 cursor-pointer">
-            Fermer
-        </button>
-
-    </div>
-</div>
 
 
         <div class="flex flex-col gap-5 lg:flex-row">
-            <div class="relative flex min-h-[330px] w-full overflow-hidden rounded-2xl  sm:min-h-[390px] lg:min-h-[450px]">
-                
+            <div
+                class="relative flex min-h-[330px] w-full overflow-hidden rounded-2xl  sm:min-h-[390px] lg:min-h-[450px]">
+
                 <!-- Mobile -->
-                <img src="./assets/images/mobile.webp" alt="hero-section-bg-mobile" class="absolute h-full w-full object-cover sm:hidden">
+                <img src="./assets/images/mobile.webp" alt="hero-section-bg-mobile"
+                    class="absolute h-full w-full object-cover sm:hidden">
 
                 <!-- Tablet -->
-                <img src="./assets/images/tablet.webp" alt="hero-section-bg-tablet" class="absolute hidden h-full w-full sm:block object-cover lg:hidden">
+                <img src="./assets/images/tablet.webp" alt="hero-section-bg-tablet"
+                    class="absolute hidden h-full w-full sm:block object-cover lg:hidden">
 
                 <!-- Desktop -->
-                <img src="./assets/images/desktop.webp" alt="hero-section-bg-desktop" class="absolute hidden h-full w-full object-cover lg:block">
-                <div class="relative gap-4 z-10 flex w-full  flex-col items-start justify-center p-6 text-white sm:p-10 lg:p-12">
-                    <span class="flex items-center gap-2 rounded-full border bg-[#e5e7eb9c] border-gray-500 px-4 py-2 text-xs font-bold text-black sm:text-sm">
+                <img src="./assets/images/desktop.webp" alt="hero-section-bg-desktop"
+                    class="absolute hidden h-full w-full object-cover lg:block">
+                <div
+                    class="relative gap-4 z-10 flex w-full  flex-col items-start justify-center p-6 text-white sm:p-10 lg:p-12">
+                    <span
+                        class="flex items-center gap-2 rounded-full border bg-[#e5e7eb9c] border-gray-500 px-4 py-2 text-xs font-bold text-black sm:text-sm">
                         <i class="fa-solid fa-tags text-yellow-300"></i>
                         Promos AUCHAN
                     </span>
@@ -152,9 +160,10 @@
 
                     <div class="flex flex-wrap items-center gap-4">
 
-                        <p class=" items-center flex gap-3 text-red-600 rounded-full bg-white px-5 py-3 text-sm font-bold sm:text-base">
+                        <p
+                            class=" items-center flex gap-3 text-red-600 rounded-full bg-white px-5 py-3 text-sm font-bold sm:text-base">
                             Découvrir les promos
-                            <i class="fa-solid fa-arrow-right" ></i>
+                            <i class="fa-solid fa-arrow-right"></i>
                         </p>
 
                         <p class="text-sm font-medium text-black">
@@ -167,13 +176,22 @@
 
             </div>
 
-      
+
 
         </div>
 
     </section>
     <!-- section 1 -->
-    <section class=" flex flex-col gap-4">
+    <section class=" flex flex-col gap-4 ">
+        <div class="flex justify-end gap-3 px-4">
+            <button id="btnGrid" type="button" class="bg-red-600 text-white px-4 py-2 rounded-lg cursor-pointer">
+                <i class="fa-solid fa-table-cells-large"></i>
+            </button>
+
+            <button id="btnList" type="button" class="bg-gray-100 text-gray-700 px-4 py-2 rounded-lg cursor-pointer">
+                <i class="fa-solid fa-list"></i>
+            </button>
+        </div>
         <div id="produits" class="flex flex-wrap gap-5 justify-center items-center">
 
         </div>

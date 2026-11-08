@@ -8,6 +8,23 @@ const btnPanier = document.querySelector('#btnPanier')
 const modalPanier = document.querySelector('#panierModal')
 const fermerPanier = document.querySelector('#cancelPanierModal')
 
+const btnGrid = document.querySelector("#btnGrid")
+const btnList = document.querySelector("#btnList")
+
+btnList.addEventListener("click", function () {
+    produits.classList.remove("flex-wrap")
+    produits.classList.add("flex-col")
+    btnList.classList.add("bg-red-600", "text-white")
+    btnGrid.classList.remove("bg-red-600", "text-white")
+})
+
+btnGrid.addEventListener("click", function () {
+    produits.classList.remove("flex-col")
+    produits.classList.add("flex-wrap")
+    btnGrid.classList.add("bg-red-600", "text-white")
+    btnList.classList.remove("bg-red-600", "text-white")
+})
+
 
 btnCategory.addEventListener('click', function () {
     modal.style.display = 'flex'
